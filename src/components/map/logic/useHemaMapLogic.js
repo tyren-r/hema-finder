@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 
-const HemaMapLogic = () => {
+const useHemaMapLogic = () => {
   const [userLat, setUserLat] = useState();
   const [userLong, setUserLong] = useState();
 
@@ -13,4 +13,4 @@ const HemaMapLogic = () => {
   }, [])
   return { userLat, userLong };
 }
-export default HemaMapLogic;
+export default useHemaMapLogic;

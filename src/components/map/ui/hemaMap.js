@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react';
-import HemaMapLogic from "../logic/hemaMapLogic";
+import HemaMapLogic from "../logic/useHemaMapLogic";
 import User from '../../../misc/user.png';
 import HemaClubs from '../../../misc/hemaClubs.json'
 import HemaMarker from "./hemaMarker";
