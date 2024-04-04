@@ -1,5 +1,5 @@
 import Pin from '../../../misc/location-pin.png' ;
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from 'react-tooltip'
 
 const HemaMarker = (props) => (
     
@@ -11,7 +11,7 @@ const HemaMarker = (props) => (
         data-tip={props.name +'<br/>Click for directions'}
               
         >
-            <ReactTooltip
+            <Tooltip
             multiline={true}
             id="club"
              />

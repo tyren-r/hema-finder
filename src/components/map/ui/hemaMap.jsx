@@ -4,7 +4,7 @@ import HemaMapLogic from "../logic/useHemaMapLogic";
 import User from '../../../misc/user.png';
 import HemaClubs from '../../../misc/hemaClubs.json'
 import HemaMarker from "./hemaMarker";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from 'react-tooltip'
 
 export default function HemaMap() {
   const { userLat, userLong } = HemaMapLogic();
@@ -29,7 +29,7 @@ export default function HemaMap() {
             data-for="user"
             data-tip="Your Location"
           />
-          <ReactTooltip
+          <Tooltip
             id="user"
           />
           {HemaClubs.map((club, index) => (
