@@ -1,44 +1,44 @@
 [
     {
         "name": "Black Bear Historical Fencing",
-        "lat": "39.616270",
-        "lng": "-79.931580",
+        "lat": 39.616270,
+        "lng": -79.931580,
         "url": "https://www.google.com/maps/dir/?api=1&destination=39.616270,-79.931580"
     },
     {
         "name": "Steel City Historical Fencing",
-        "lat": "40.484000",
-        "lng": "-79.948630",
+        "lat": 40.484000,
+        "lng": -79.948630,
         "url": "https://www.google.com/maps/dir/?api=1&destination=40.484000,-79.948630"
     },
     {
         "name": "Columbus Saber Academy",
-        "lat": "40.114510",
-        "lng": "-82.999310",
+        "lat": 40.114510,
+        "lng": -82.999310,
         "url": "https://www.google.com/maps/dir/?api=1&destination=40.114510,-82.999310"
     },
     {
         "name": "Historical Combat Studies",
-        "lat": "44.901371",
-        "lng": "-75.065529",
+        "lat": 44.901371,
+        "lng": -75.065529,
         "url": "https://www.google.com/maps/dir/?api=1&destination=44.901371,-75.065529"
     },
     {
         "name": "California Sabre",
-        "lat": "36.790810",
-        "lng": "-119.852000",
+        "lat": 36.790810,
+        "lng": -119.852000,
         "url": "https://www.google.com/maps/dir/?api=1&destination=36.790810,-119.852000"
     },
     {
         "name": "Texas Armizare",
-        "lat": "29.7957932",
-        "lng": "-95.4841621",
+        "lat": 29.7957932,
+        "lng": -95.4841621,
         "url": "https://www.google.com/maps/dir/?api=1&destination=29.7957932,-95.4841621"
     },
     {
         "name": "Colorado Frontier Fighters",
-        "lat": "38.9251692",
-        "lng": "-104.7923177",
+        "lat": 38.9251692,
+        "lng": -104.7923177,
         "url": "https://www.google.com/maps/dir/?api=1&destination=29.7957932,-95.4841621"
     }
 ]
