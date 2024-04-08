@@ -7,19 +7,18 @@ const HemaMarker = (props) => (
         target="_blank"
         rel="noreferrer"
         href={props.url}
-        data-for="club"
-        data-tip={props.name +'<br/>Click for directions'}
+        data-tooltip-id="club"
+        data-tooltip-content={props.name}
               
         >
             <Tooltip
             multiline={true}
             id="club"
+            style={{padding:'6px',fontSize:'11px'}}
              />
         <img
         alt={props.name}
             height={20}
-            lat={props.lat}
-            lng={props.lng}
             src={Pin}
         />
     </a>

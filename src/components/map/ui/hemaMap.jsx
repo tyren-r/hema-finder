@@ -3,9 +3,8 @@ import { GoogleMap } from '@react-google-maps/api';
 import HemaMapLogic from "../logic/useHemaMapLogic";
 import User from '../../../misc/user.png';
 import HemaClubs from '../../../misc/hemaClubs.json';
-// import HemaMarker from "./hemaMarker";
-// import { Tooltip } from 'react-tooltip';
-import { Marker } from '@react-google-maps/api';
+import HemaMarker from "./hemaMarker";
+import { Marker,OverlayView } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100vw',
@@ -22,21 +21,14 @@ function HemaMap() {
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        {/* <img
-            height={20}
-            alt="your location"
-            lat={userLat}
-            lng={userLong}
-            src={User}
-            data-for="user"
-            data-tip="Your Location"
-          />
-          <Tooltip
-            id="user"
-          /> */}
-          <Marker key={1235864} label={{text:"You", className:'marker-label'}} icon={User}  position={ center }   />
+          <Marker key={1235864} label={{text:"Your Location", className:'marker-label'}} icon={User}  position={ center }   />
           {HemaClubs.map((club, index) => (
-            <Marker key={index}  label={club.name} position={ { lat: club.lat, lng: club.lng }}  url={club.url} />
+            <OverlayView 
+            mapPaneName="overlayMouseTarget"
+            position={{ lat: club.lat, lng: club.lng }}
+            key={index}>
+              <HemaMarker  name={club.name} url={club.url} />
+            </OverlayView>
           ))}
         <></>
       </GoogleMap>
