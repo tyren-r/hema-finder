@@ -1,10 +1,10 @@
 import React from "react";
 import { GoogleMap } from '@react-google-maps/api';
 import HemaMapLogic from "../logic/useHemaMapLogic";
-import User from '../../../misc/user.png';
 import HemaClubs from '../../../misc/hemaClubs.json';
-import HemaMarker from "./hemaMarker";
-import { Marker,OverlayView } from '@react-google-maps/api';
+import HemaMarker from "./hemaLocationMarker";
+import UserMarker from "./userMarker";
+import { OverlayView } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100vw',
@@ -12,7 +12,7 @@ const containerStyle = {
 };
 
 function HemaMap() {
-  const { userLat, userLong, isLoaded, center, onLoad, onUnmount } = HemaMapLogic();
+  const { isLoaded, center, onLoad, onUnmount } = HemaMapLogic();
   return isLoaded ? (
       <GoogleMap
         mapContainerStyle={containerStyle}
@@ -21,16 +21,24 @@ function HemaMap() {
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-          <Marker key={1235864} label={{text:"Your Location", className:'marker-label'}} icon={User}  position={ center }   />
-          {HemaClubs.map((club, index) => (
-            <OverlayView 
-            mapPaneName="overlayMouseTarget"
-            position={{ lat: club.lat, lng: club.lng }}
-            key={index}>
-              <HemaMarker  name={club.name} url={club.url} />
-            </OverlayView>
-          ))}
+        <OverlayView 
+        mapPaneName="overlayMouseTarget"
+        position={center}
+        >
+          <UserMarker />
+        </OverlayView>
+
+        {/* The Order of this array will never change, so using index as key is okay here */}
+        {HemaClubs.map((club, index) => (
+          <OverlayView 
+          mapPaneName="overlayMouseTarget"
+          position={{ lat: club.lat, lng: club.lng }}
+          key={index}>
+            <HemaMarker  name={club.name} url={club.url} />
+          </OverlayView>
+        ))}
         <></>
+
       </GoogleMap>
   ) : 'Loading'
 }

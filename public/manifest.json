@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Hema Finder",
+  "name": "Simple map for viewing and getting directions to HEMA clubs in the USA",
   "icons": [
     {
       "src": "favicon.ico",
